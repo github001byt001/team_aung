@@ -494,6 +494,10 @@ function jikandeugokasu() {
     } 
 }
 
+function teishi() {
+	jikkou = false;
+}
+
 function gamekaishi() {
     gamegamen = document.getElementById('game');
     cg = gamegamen.getContext('2d');
