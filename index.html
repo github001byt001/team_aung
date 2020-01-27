@@ -26,7 +26,7 @@
 	<div style="position:absolute; left:20px; top:10px">
 		<h1>テトリス</h1>
 		<div style="width:380px;">
-			スコア：<span id="tokuten">0</span>
+			点数：<span id="tokuten">0</span>
 		</div>
 	</div>
 	<canvas id="back" width="240" height="440"
@@ -35,17 +35,30 @@
 		style="position:absolute; left:20px; top:150px; background-color: transparent"></canvas>
 	<canvas id="tsugi" width="80" height="80"
 		style="position:absolute; left:300px; top:150px; background-color: black"></canvas>
-	<button id="kaishibtn" style="position: absolute; left:300px;top:300px; width:100px; height:50px"
-		onclick="gamekaishi()">
-		ゲーム<br>スタート
+	<button id="level1" style="position: absolute; left:500px;top:300px; width:120px; height:50px"
+		onclick="level_1()">
+	レベル１	
 	</button>
-	<button id="teishibtn" style="position: absolute; left:300px;top:400px; width:100px; height:50px"
+	<button id="level2" style="position: absolute; left:500px;top:400px; width:120px; height:50px"
+		onclick="level_2()">
+	レベル2	
+	</button>
+	<button id="level3" style="position: absolute; left:500px;top:500px; width:120px; height:50px"
+		onclick="level_3()">
+	レベル3	
+	</button>
+
+	<button id="kaishibtn" style="position: absolute; left:300px;top:300px; width:120px; height:50px"
+		onclick="gamekaishi()">
+		ゲーム開始
+	</button>
+	<button id="teishibtn" style="position: absolute; left:300px;top:400px; width:120px; height:50px"
 		onclick="teishi()">
 		 一時停止
 	</button>
-	<button id="resume" style="position: absolute; left:300px;top:500px; width:100px; height:50px" 
-	   onclick="resume()">
-		ゲーム<br>再開
+	<button id="resume" style="position: absolute; left:300px;top:500px; width:120px; height:50px" 
+	   onclick="resume(); resu=true">
+		ゲーム再開
 	</button>
 </body>
 
