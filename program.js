@@ -451,9 +451,13 @@ function hajime() {
 	// デフォルトのレベル設定
 	lv = 1000;
 	// 背景のCanvasを取得
-	backgamen = document.getElementById('back');
-	cb = backgamen.getContext('2d');
+	//backgamen = document.getElementById('back');
+	//cb = backgamen.getContext('2d');
+	// 背景を設定
 
+	//image = new Image();
+	//image.src = "images/img001.png";
+	cb.drawImage(image, 0, 0, 250, 400 );
 	// 塗りを設定
 	cb.fillStyle = '#CCCCCC';
 

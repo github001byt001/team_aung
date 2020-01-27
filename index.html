@@ -1,65 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 
 <head>
-	<script src="program.js"></script>
-	<audio id="kaiten" preload="auto">
-		<source src="oto/kaiten.mp3" type="audio/mp3">
-	</audio>
-	<audio id="ochiru" preload="auto">
-		<source src="oto/ochiru.mp3" type="audio/mp3">
-	</audio>
-	<audio id="don" preload="auto">
-		<source src="oto/don.mp3" type="audio/mp3">
-	</audio>
-	<audio id="kieru" preload="auto">
-		<source src="oto/kieru.mp3" type="audio/mp3">
-	</audio>
-	<audio id="zenbu" preload="auto">
-		<source src="oto/zenbu.mp3" type="audio/mp3">
-	</audio>
-	<audio id="gameover" preload="auto">
-		<source src="oto/gameover.mp3" type="audio/mp3">
-	</audio>
+<meta charset="UTF-8">
+<!--  <link rel="stylesheet" href="teto.css"> -->
+<script src="program.js"></script>
+<audio id="kaiten" preload="auto">
+	<source src="oto/kaiten.mp3" type="audio/mp3">
+</audio>
+<audio id="ochiru" preload="auto">
+	<source src="oto/ochiru.mp3" type="audio/mp3">
+</audio>
+<audio id="don" preload="auto">
+	<source src="oto/don.mp3" type="audio/mp3">
+</audio>
+<audio id="kieru" preload="auto">
+	<source src="oto/kieru.mp3" type="audio/mp3">
+</audio>
+<audio id="zenbu" preload="auto">
+	<source src="oto/zenbu.mp3" type="audio/mp3">
+</audio>
+<audio id="gameover" preload="auto">
+	<source src="oto/gameover.mp3" type="audio/mp3">
+</audio>
 </head>
 
-<body onload="hajime()" onkeydown="ugokasu(event)">
-	<div style="position:absolute; left:20px; top:10px">
-		<h1>テトリス</h1>
-		<div style="width:380px;">
+<body onload="hajime()" onkeydown="ugokasu(event)" bgcolor="pink">
+	<div style="position: absolute; left: 20px; top: 10px">
+		<h1>テートゥリス (THAE THU LIS)</h1>
+		<div style="width: 380px;">
 			点数：<span id="tokuten">0</span>
 		</div>
 	</div>
 	<canvas id="back" width="240" height="440"
-		style="position:absolute; left:20px; top:150px; background-color: black"></canvas>
+		style="position: absolute; left: 20px; top: 150px; background-color: black"></canvas>
 	<canvas id="game" width="240" height="440"
-		style="position:absolute; left:20px; top:150px; background-color: transparent"></canvas>
+		style="position: absolute; left: 20px; top: 150px; background-color: transparent"></canvas>
 	<canvas id="tsugi" width="80" height="80"
-		style="position:absolute; left:300px; top:150px; background-color: black"></canvas>
-	<button id="level1" style="position: absolute; left:500px;top:300px; width:120px; height:50px"
-		onclick="level_1()">
-	レベル１	
-	</button>
-	<button id="level2" style="position: absolute; left:500px;top:400px; width:120px; height:50px"
-		onclick="level_2()">
-	レベル2	
-	</button>
-	<button id="level3" style="position: absolute; left:500px;top:500px; width:120px; height:50px"
-		onclick="level_3()">
-	レベル3	
-	</button>
+		style="position: absolute; left: 300px; top: 150px; background-color: black"></canvas>
+	<button id="level1"
+		style="position: absolute; left: 500px; top: 300px; width: 120px; height: 50px"
+		onclick="level_1()">レベル１</button>
+	<button id="level2"
+		style="position: absolute; left: 500px; top: 400px; width: 120px; height: 50px"
+		onclick="level_2()">レベル2</button>
+	<button id="level3"
+		style="position: absolute; left: 500px; top: 500px; width: 120px; height: 50px"
+		onclick="level_3()">レベル3</button>
 
-	<button id="kaishibtn" style="position: absolute; left:300px;top:300px; width:120px; height:50px"
-		onclick="gamekaishi()">
-		ゲーム開始
-	</button>
-	<button id="teishibtn" style="position: absolute; left:300px;top:400px; width:120px; height:50px"
-		onclick="teishi()">
-		 一時停止
-	</button>
-	<button id="resume" style="position: absolute; left:300px;top:500px; width:120px; height:50px" 
-	   onclick="resume(); resu=true">
-		ゲーム再開
-	</button>
+	<button id="kaishibtn"
+		style="position: absolute; left: 300px; top: 300px; width: 120px; height: 50px"
+		onclick="gamekaishi()">ゲーム開始</button>
+	<button id="teishibtn"
+		style="position: absolute; left: 300px; top: 400px; width: 120px; height: 50px"
+		onclick="teishi()">一時停止</button>
+	<button id="resume"
+		style="position: absolute; left: 300px; top: 500px; width: 120px; height: 50px"
+		onclick="resume(); resu=true">ゲーム再開</button>
+	<script type="text/javascript">
+		backgamen = document.getElementById('back');
+		cb = backgamen.getContext('2d');
+		// 背景を設定
+		image = new Image();
+		image.src = "images/img001.png";
+		cb.drawImage(image, 0, 0, 250, 400);
+	</script>
 </body>
 
 </html>
