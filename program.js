@@ -190,7 +190,7 @@ function shitaidou() {
 			document.getElementById('gameover').play();
 
 			// メッセージを出す
-			alert('ゲームオーバー');
+			alert('GAME OVER');
 
 			// 実行中であることを止める
 			jikkou = false;
@@ -201,13 +201,9 @@ function shitaidou() {
 	}
 
 	// 時間を少しずつ速くする
-	// jikan = jikan - lv;
-	// jikan = jikan - 10;
 	jikan = jikan - 1;
 	if (jikan < 500) {
-		// if (jikan < 50) {
 		// すごく速くなったら元に戻す
-		// jikan = 1000;
 		jikan = lv;
 	}
 }
@@ -446,18 +442,34 @@ function gamekaishi() {
 
 	kaku(cg, ix, iy, imuki, ishurui);
 }
-
-function hajime() {
-	// デフォルトのレベル設定
-	lv = 1000;
+function back_lv1() {
 	// 背景のCanvasを取得
-	//backgamen = document.getElementById('back');
-	//cb = backgamen.getContext('2d');
+	backgamen = document.getElementById('back');
+	cb = backgamen.getContext('2d');
 	// 背景を設定
-
-	//image = new Image();
-	//image.src = "images/img001.png";
-	cb.drawImage(image, 0, 0, 250, 400 );
+	image = new Image();
+	image.src = "images/img002.png";
+	cb.drawImage(image, 0, 0, 250, 400);
+	kabe();
+}
+function back_lv2() {
+	backgamen = document.getElementById('back');
+	cb = backgamen.getContext('2d');
+	image = new Image();
+	image.src = "images/img003.png";
+	cb.drawImage(image, 0, 0, 250, 400);
+	kabe();
+}
+function back_lv3() {
+	backgamen = document.getElementById('back');
+	cb = backgamen.getContext('2d');
+	image = new Image();
+	image.src = "images/img004.png";
+	cb.drawImage(image, 0, 0, 250, 400);
+	kabe();
+}
+function kabe() {
+	cb.drawImage(image, 0, 0, 250, 400);
 	// 塗りを設定
 	cb.fillStyle = '#CCCCCC';
 
@@ -500,4 +512,9 @@ function hajime() {
 		cb.strokeRect(x, y, 20, 20);
 		x = x + 20;
 	}
+}
+function hajime() {
+	// デフォルトのレベル設定
+	lv = 1000;
+	kabe();
 }

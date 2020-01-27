@@ -40,13 +40,13 @@
 		style="position: absolute; left: 300px; top: 150px; background-color: black"></canvas>
 	<button id="level1"
 		style="position: absolute; left: 500px; top: 300px; width: 120px; height: 50px"
-		onclick="level_1()">レベル１</button>
+		onclick="level_1(); back_lv1()">レベル１</button>
 	<button id="level2"
 		style="position: absolute; left: 500px; top: 400px; width: 120px; height: 50px"
-		onclick="level_2()">レベル2</button>
+		onclick="level_2(); back_lv2()">レベル2</button>
 	<button id="level3"
 		style="position: absolute; left: 500px; top: 500px; width: 120px; height: 50px"
-		onclick="level_3()">レベル3</button>
+		onclick="level_3(); back_lv3()">レベル3</button>
 
 	<button id="kaishibtn"
 		style="position: absolute; left: 300px; top: 300px; width: 120px; height: 50px"
@@ -60,10 +60,9 @@
 	<script type="text/javascript">
 		backgamen = document.getElementById('back');
 		cb = backgamen.getContext('2d');
-		// 背景を設定
 		image = new Image();
 		image.src = "images/img001.png";
-		cb.drawImage(image, 0, 0, 250, 400);
+		cb.drawImage(image);
 	</script>
 </body>
 
